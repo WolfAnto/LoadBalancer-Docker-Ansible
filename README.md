@@ -149,6 +149,11 @@ backend myapp_back
       server web2 172.17.0.4:80
 ```
 
+Revenez au dossier précedent.
+```
+cd ..
+```
+
 Création de nos machines :
 Créer le fichier "Dockerfile".
 ```
