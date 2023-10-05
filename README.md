@@ -7,6 +7,7 @@ sudo apt install Ansible
 ```
 
 Création de la configuration Ansible :
+
 Créer le dossier dans lequel nous réaliserons notre Loadbalancer.
 ```bash
 mkdir loadbalancer-ansible
