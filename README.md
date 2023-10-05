@@ -38,6 +38,7 @@ nano hosts
 
 ```
 nano apache.yml
+```
 ```yml
   - hosts: web
     roles:
