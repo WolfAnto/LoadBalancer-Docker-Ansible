@@ -224,7 +224,7 @@ ansible-playbook apache.yml
 
 Résultat :
 Vérifier votre loadbalancer sur http://localhost.
-```url
+```http
 http://localhost
 ```
 ![image](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/df901b12-6857-4798-bd29-a219524711af)
