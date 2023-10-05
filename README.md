@@ -65,7 +65,7 @@ nano Dockerfile
 
 ![carbon(1)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/0df6d55f-edd6-4d67-a200-5b2986840b28)
 
-Monter votre Dockerfile et créez-en 3 exemplaires.
+Monter votre Dockerfile et créez-en 3 exemplaires. (1 Loadbalancer, 2 Serveur Web)
 ```bash
 docker build -t ubuntu-ssh .
 docker run -d -p 80:80 ubuntu-ssh
