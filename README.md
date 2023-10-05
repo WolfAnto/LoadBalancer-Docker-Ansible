@@ -25,26 +25,13 @@ Indiquer l'emplacement du fichier contenant vos hôtes et vos rôles.
 
 ![carbon(1)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/ad1bc7b3-f20e-481a-a54e-d544902b2e63)
 
-```
-[defaults]
-inventory = hosts
-host_key_checking = false
-roles_path = /
-```
-
 ```bash
 nano hosts
 ```
 
 Indiquer vos groupes avec vos hôtes
-```
-[loadbalancer]
-172.17.0.2 ansible_ssh_pass=root ansible_ssh_user=root
 
-[web]
-172.17.0.3 ansible_ssh_pass=root ansible_ssh_user=root
-172.17.0.4 ansible_ssh_pass=root ansible_ssh_user=root
-```
+![carbon](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/cb534ae9-4a26-49cc-8c4f-7d480fdfb07d)
 
 Créer le playbook ansible.
 ```bash
