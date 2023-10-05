@@ -1,0 +1,43 @@
+  - hosts: web
+    roles:
+    - role: webserver
+    tasks:
+      - name: install apache2
+        apt: name=apache2 update_cache=yes state=latest
+
+      - name: enabled mod_rewrite
+        apache2_module: name=rewrite state=present
+        notify:
+          - restart apache2
+
+      - name: apache2 listen on port 80
+        lineinfile: dest=/etc/apache2/ports.conf regexp="^Listen 80" line="Listen 80" state=present
+        notify:
+          - restart apache2
+
+      - name: apache2 virtualhost on port 80
+        lineinfile: dest=/etc/apache2/sites-available/000-default.conf regexp="^<VirtualHost \*:80>" line="<VirtualHost *:80>" state=present
+        notify:
+          - restart apache2
+
+    handlers:
+      - name: restart apache2
+        service: name=apache2 state=restarted
+
+  - hosts: loadbalancer
+    roles:
+    - role: lbserver
+    tasks:
+      - name: install HAPROXY
+        apt: name=haproxy update_cache=yes state=latest
+
+      - name: copy HAPROXY configuration files to LoadBalancer
+        template:
+           src: haproxy.cfg
+           dest: /etc/haproxy/
+        notify:
+          - restart haproxy
+
+    handlers:
+      - name: restart haproxy
+        service: name=haproxy state=restarted
