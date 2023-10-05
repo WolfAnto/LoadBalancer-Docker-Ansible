@@ -81,7 +81,7 @@ ansible-playbook apache.yml
 ```
 
 Résultat :
-Vérifier votre loadbalancer sur http://localhost.
+Vérifier votre loadbalancer sur http://localhost et faite F5 deux fois.
 ```http
 http://localhost
 ```
