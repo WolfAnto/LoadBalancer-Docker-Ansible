@@ -18,18 +18,17 @@ cd loadbalancer-ansible
 ```
 
 Créer le fichier de configuration ansible.
+Indiquer l'emplacement du fichier contenant vos hôtes et vos rôles.
 ```bash
 nano ansible.cfg
 ```
-Indiquer l'emplacement du fichier contenant vos hôtes et vos rôles.
 
 ![carbon(1)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/ad1bc7b3-f20e-481a-a54e-d544902b2e63)
 
+Indiquer vos groupes avec vos hôtes
 ```bash
 nano hosts
 ```
-
-Indiquer vos groupes avec vos hôtes
 
 ![carbon](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/cb534ae9-4a26-49cc-8c4f-7d480fdfb07d)
 
@@ -49,51 +48,8 @@ Créer le fichier de configuration HAProxy pour le le loadbalancer.
 ```bash
 nano templates/haproxy.cfg
 ```
-```
-global
-        log /dev/log    local0
-        log /dev/log    local1 notice
-        chroot /var/lib/haproxy
-        stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners
-        stats timeout 30s
-        user haproxy
-        group haproxy
-        daemon
 
-        # Default SSL material locations
-        ca-base /etc/ssl/certs
-        crt-base /etc/ssl/private
-
-        # See: https://ssl-config.mozilla.org/#server=haproxy&server-version=2.0.3&confi>
-        ssl-default-bind-ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA2>
-        ssl-default-bind-ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_>
-        ssl-default-bind-options ssl-min-ver TLSv1.2 no-tls-tickets
-
-defaults
-        log     global
-        mode    http
-        option  httplog
-        option  dontlognull
-        timeout connect 5000
-        timeout client  50000
-        timeout server  50000
-        errorfile 400 /etc/haproxy/errors/400.http
-        errorfile 403 /etc/haproxy/errors/403.http
-        errorfile 408 /etc/haproxy/errors/408.http
-        errorfile 500 /etc/haproxy/errors/500.http
-        errorfile 502 /etc/haproxy/errors/502.http
-        errorfile 503 /etc/haproxy/errors/503.http
-        errorfile 504 /etc/haproxy/errors/504.http
-
-frontend myapp_front
-      bind *:80
-      default_backend myapp_back
-
-backend myapp_back
-      balance roundrobin
-      server web1 172.17.0.3:80
-      server web2 172.17.0.4:80
-```
+![carbon(2)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/a8a104ca-5be9-4b38-b132-5124e6362fe9)
 
 Revenez au dossier précedent.
 ```bash
