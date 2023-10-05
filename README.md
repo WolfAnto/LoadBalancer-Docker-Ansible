@@ -1,5 +1,5 @@
 # LoadBalancer-Docker-Ansible
-Création d'un loadbalancer avec Docker et Ansible
+Création d'un loadbalancer avec Docker et Ansible.
 
 Install Ansible :
 ```bash
@@ -12,7 +12,7 @@ Créer le dossier dans lequel nous réaliserons notre Loadbalancer.
 mkdir loadbalancer-ansible
 ```
 
-Placer vous dans le dossier précedement créer.
+Placez-vous dans le dossier précédemment créé.
 ```bash
 cd loadbalancer-ansible
 ```
@@ -25,7 +25,7 @@ nano ansible.cfg
 
 ![carbon(1)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/ad1bc7b3-f20e-481a-a54e-d544902b2e63)
 
-Indiquer vos groupes avec vos hôtes
+Indiquer vos groupes avec vos hôtes.
 ```bash
 nano hosts
 ```
@@ -44,14 +44,14 @@ Créer le dossier "Templates".
 mkdir templates
 ```
 
-Créer le fichier de configuration HAProxy pour le le loadbalancer.
+Créer le fichier de configuration HAProxy pour le loadbalancer.
 ```bash
 nano templates/haproxy.cfg
 ```
 
 ![carbon(2)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/a8a104ca-5be9-4b38-b132-5124e6362fe9)
 
-Revenez au dossier précedent.
+Revenez au dossier précédent.
 ```bash
 cd ..
 ```
@@ -64,7 +64,7 @@ nano Dockerfile
 
 ![carbon(1)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/0df6d55f-edd6-4d67-a200-5b2986840b28)
 
-Monter votre Dockerfile et créer-en 3 exemplaires.
+Monter votre Dockerfile et créez-en 3 exemplaires.
 ```bash
 docker build -t ubuntu-ssh .
 docker run -d -p 80:80 ubuntu-ssh
