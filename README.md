@@ -37,7 +37,7 @@ Créer le playbook ansible.
 nano apache.yml
 ```
 
-![carbon(1)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/06892ae3-5e20-4779-8e2f-ca3be1611b2b)
+![carbon(2)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/d26cc89b-d257-4d64-bbde-e8231fa7f8b3)
 
 Créer le dossier "Templates".
 ```bash
