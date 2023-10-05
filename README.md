@@ -74,6 +74,7 @@ docker run -d -p ubuntu-ssh
 ```
 
 Application de la configuration Ansible :
+
 Appliquer votre playbook
 ```bash
 ansible-playbook apache.yml
