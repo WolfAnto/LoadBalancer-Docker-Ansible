@@ -29,7 +29,7 @@ host_key_checking = false
 roles_path = /
 ```
 
-```
+```bash
 nano hosts
 ```
 
@@ -44,7 +44,7 @@ Indiquer vos groupes avec vos hôtes
 ```
 
 Créer le playbook ansible.
-```
+```bash
 nano apache.yml
 ```
 ```yml
@@ -95,12 +95,12 @@ nano apache.yml
 ```
 
 Créer le dossier "Templates".
-```
+```bash
 mkdir templates
 ```
 
 Créer le fichier de configuration HAProxy pour le le loadbalancer.
-```
+```bash
 nano templates/haproxy.cfg
 ```
 ```
@@ -150,13 +150,13 @@ backend myapp_back
 ```
 
 Revenez au dossier précedent.
-```
+```bash
 cd ..
 ```
 
 Création de nos machines :
 Créer le fichier "Dockerfile".
-```
+```bash
 nano Dockerfile
 ```
 ```lang-docker
@@ -209,7 +209,7 @@ CMD ["/usr/sbin/sshd", "-D"]
 ```
 
 Monter votre Dockerfile et créer-en 3 exemplaires.
-```
+```bash
 docker build -t ubuntu-ssh .
 docker run -d -p 80:80 ubuntu-ssh
 docker run -d -p ubuntu-ssh
@@ -218,13 +218,13 @@ docker run -d -p ubuntu-ssh
 
 Application de la configuration Ansible :
 Appliquer votre playbook
-```
+```bash
 ansible-playbook apache.yml
 ```
 
 Résultat :
 Vérifier votre loadbalancer sur http://localhost.
-```
+```url
 http://localhost
 ```
 ![image](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/df901b12-6857-4798-bd29-a219524711af)
