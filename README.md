@@ -22,7 +22,7 @@ Créer le fichier de configuration ansible.
 nano ansible.cfg
 ```
 Indiquer l'emplacement du fichier contenant vos hôtes et vos rôles.
-![carbon](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/c06101bc-84e4-4c03-9b07-1f30c49c96f1)
+![carbon(1)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/ad1bc7b3-f20e-481a-a54e-d544902b2e63)
 ```
 [defaults]
 inventory = hosts
