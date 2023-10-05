@@ -227,3 +227,7 @@ Vérifier votre loadbalancer sur http://localhost.
 ```
 http://localhost
 ```
+![image](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/df901b12-6857-4798-bd29-a219524711af)
+
+![image](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/7c73de4e-1770-4fcf-a534-9a726cc1e026)
+
