@@ -159,7 +159,7 @@ Créer le fichier "Dockerfile".
 ```
 nano Dockerfile
 ```
-```programming
+```lang-docker
 # Use the official image as a parent image
 FROM ubuntu
 
