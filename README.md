@@ -2,23 +2,23 @@
 Création d'un loadbalancer avec Docker et Ansible
 
 Install Ansible :
-```
+```bash
 sudo apt install Ansible
 ```
 
 Création de la configuration Ansible :
 Créer le dossier dans lequel nous réaliserons notre Loadbalancer.
-```
+```bash
 mkdir loadbalancer-ansible
 ```
 
 Placer vous dans le dossier précedement créer.
-```
+```bash
 cd loadbalancer-ansible
 ```
 
 Créer le fichier de configuration ansible.
-```
+```bash
 nano ansible.cfg
 ```
 Indiquer l'emplacement du fichier contenant vos hôtes et vos rôles.
