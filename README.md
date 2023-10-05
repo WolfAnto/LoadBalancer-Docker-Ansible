@@ -62,7 +62,8 @@ Créer le fichier "Dockerfile".
 nano Dockerfile
 ```
 
-![carbon](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/b8655f5f-1bb9-48e5-b09b-68fe8c5e6ed4)
+![carbon(1)](https://github.com/WolfAnto/LoadBalancer-Docker-Ansible/assets/73076854/0df6d55f-edd6-4d67-a200-5b2986840b28)
+
 
 Monter votre Dockerfile et créer-en 3 exemplaires.
 ```bash
